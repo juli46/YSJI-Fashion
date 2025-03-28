@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/css.css">
+    <title>Formulario de Inicio de Sesión</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <!-- Formulario de Registro -->
+        <div class="form-container sign-up">
+            <form id="registerForm" action="php/register.php" method="POST" onsubmit="return validarRegistro()">
+                <h1>Regístrate</h1>
+                <div class="social-icons">
+                    <a href="https://accounts.google.com/signin" class="icon" target="_blank" aria-label="Google"><i class="fa-brands fa-google"></i></a>
+                    <a href="https://www.facebook.com/login" class="icon" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <span>o utiliza tu correo electrónico para registrarte</span>
+                
+                <!-- Campo de Nombre -->
+                <input type="text" id="registerNombre" name="nombre" placeholder="Nombre" required>
+                <div id="errorNombre" class="error-message"></div>
+                
+                <!-- Campo de Correo Electrónico -->
+                <input type="email" id="registerCorreo" name="correo" placeholder="Correo Electrónico" required>
+                <div id="errorCorreo" class="error-message"></div>
+                
+                <!-- Campo de Contraseña -->
+                <input type="password" id="registerContraseña" name="contraseña" placeholder="Contraseña" required>
+                <div id="errorContraseña" class="error-message"></div>
+                
+                <!-- Campo de Confirmar Contraseña -->
+                <input type="password" id="registerConfirmarContraseña" name="confirmar-contraseña" placeholder="Confirmar Contraseña" required>
+                <div id="errorConfirmarContraseña" class="error-message"></div>
+
+                <!-- Mostrar Contraseña -->
+                <div class="show-password-container">
+                    <input type="checkbox" id="mostrarContraseña" class="show-password" onclick="mostrarContraseñas()">
+                    <label for="mostrarContraseña">Mostrar Contraseña</label>
+                </div>
+
+                <button type="submit">Crear Cuenta</button>
+            </form>
+        </div>
+
+        <!-- Formulario de Inicio de Sesión -->
+        <div class="form-container sign-in">
+            <form id="loginForm" action="php/login.php" method="POST" onsubmit="return validarLogin()">
+                <h1>Iniciar sesión</h1>
+                <div class="social-icons">
+                    <a href="https://accounts.google.com/signin" class="icon" target="_blank" aria-label="Google"><i class="fa-brands fa-google"></i></a>
+                    <a href="https://www.facebook.com/login" class="icon" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <span>Inicia con tu correo electrónico</span>
+
+                <!-- Campo de Correo con mensaje de error -->
+                <input type="email" id="loginCorreo" name="correo" placeholder="Usuario" required>
+                <div id="errorLoginCorreo" class="error-message"></div>
+
+                <!-- Campo de Contraseña con mensaje de error -->
+                <input type="password" id="loginContraseña" name="contraseña" placeholder="Contraseña" required>
+                <div id="errorLoginContraseña" class="error-message"></div>
+
+                <a href="recuperacion.html">¿Olvidaste tu contraseña?</a>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+        </div>
+
+        <!-- Contenedor de Toggle -->
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>¡Bienvenido!</h1>
+                    <p>Ingresa tus datos personales para utilizar todas las funciones del sitio</p>
+                    <button type="button" class="hidden" id="login">Iniciar sesión</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>¡Bienvenido!</h1>
+                    <p>Regístrate con tus datos personales para utilizar todas las funciones del sitio</p>
+                    <button type="button" class="hidden" id="register">Regístrate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/js.js"></script>
+</body>
+
+</html>

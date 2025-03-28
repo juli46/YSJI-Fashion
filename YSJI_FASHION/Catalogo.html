@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="YSJI FASHION - Tu tienda online de moda con descuentos increíbles">
+    <meta name="keywords" content="moda, ropa, estilo, descuentos, fashion">
+    <meta name="author" content="YSJI FASHION">
+    <title>YSJI FASHION</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/logo.jpg">
+    <link rel="apple-touch-icon" href="images/logo.jpg">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="css/catalogo.css" rel="stylesheet">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div class="main-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="custom-select-box">
+                        <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
+                            <option>COP</option>
+                            <option>USD</option>
+                            <option>EUR</option>
+                        </select>
+                    </div>
+                    <div class="our-link">
+                        <ul>
+                            <li><a href="formulario/prueba_form.html">MI CUENTA</a></li>
+                            <li><a href="#">NUESTRA UBICACIÓN </a></li>
+                            <li>LLAMANOS: +57 3215535954</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu"
+                        aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.jpg" width="180px" wclass="logo"
+                            alt=""></a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="SobreNosotros.html">Sobre nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Catalogo.html">Catálogo</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">Tienda</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="cart.html">Carrito</a></li>
+                                <li><a href="checkout.html">Verificacion</a></li>
+                                <li><a href="my-account.html">Mi cuenta</a></li>
+                                <li><a href="shop-detail.html">Detalles de la compra</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="Servicio.html">Servicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Contactenos.html">Contactanos</a></li>
+                    </ul>
+                </div>
+                <!-- End Atribute Navigation -->
+            
+<div class="attr-nav">
+    <ul>
+        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+        <li class="side-menu">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+                <i class="fa fa-shopping-bag"></i>
+                <span class="badge" id="cart-badge">3</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- Modal del carrito -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true" data-bs-backdrop="false">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      <div class="modal-body">
+        <!-- Aquí se agregarán los productos -->
+        <div class="cart-products border rounded p-3 mb-4">
+            <p class="text-muted text-center">Tu carrito está vacío.</p>
+        </div>
+
+        <!-- Total y botón de pago -->
+        <div class="card">
+            <div class="card-body d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <h5 class="mb-3 mb-md-0">Total: <span id="total" class="text-primary">$0.00</span></h5>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-warning btn-lg" onclick="pay()">Pagar</button>
+                    <button class="btn btn-danger btn-lg" onclick="clearCart()">Vaciar Carrito</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+            <!-- End Side Menu -->
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Main Top -->
+
+    <!-- Start Top Search -->
+    <div class="top-search">
+        <div class="container">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control" placeholder="Search">
+                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+            </div>
+        </div>
+    </div>
+    <!-- End Top Search -->
+    </nav>
+    <!-- End Navigation -->
+    </header>
+    <!-- End Main Top -->
+
+    <!-- Start Top Search -->
+    <div class="top-search">
+        <div class="container">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control" placeholder="Search">
+                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+            </div>
+        </div>
+    </div>
+    <!-- End Top Search -->
+
+    <!-- Start All Title Box -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Catálogo</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                        <li class="breadcrumb-item active"><a href="">Productos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End All Title Box -->
+
+    <!-- Start Shop Page  -->
+    <div class="shop-box-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-left">
+                    <div class="product-categori">
+                        <div class="filter-sidebar-left">
+                            <h3>Categorías</h3>
+                            <div class="list-group list-group-collapse list-group-sm" id="list-group-men">
+                                <a href="#" class="list-group-item list-group-item-action" onclick="filterCategory(event, 'Abrigos')">Abrigos <small class="text-muted">(3)</small></a>
+                                <a href="#" class="list-group-item list-group-item-action" onclick="filterCategory(event, 'Vestidos')">Vestidos <small class="text-muted">(1)</small></a>
+                                <a href="#" class="list-group-item list-group-item-action" onclick="filterCategory(event, 'Faldas')">Faldas <small class="text-muted">(0)</small></a>
+                                <a href="#" class="list-group-item list-group-item-action" onclick="filterCategory(event, 'Pantalones')">Pantalones <small class="text-muted">(1)</small></a>
+                                <a href="#" class="list-group-item list-group-item-action" onclick="filterCategory(event, 'Joyería')">Joyería <small class="text-muted">(0)</small></a>
+                                <a href="#" class="list-group-item list-group-item-action" onclick="filterCategory(event, 'Bolsos')">Bolsos <small class="text-muted">(1)</small></a>
+                            </div>
+                        </div>
+                        <div class="filter-price-left">
+                            <div class="title-left">
+                                <h3>Precio</h3>
+                            </div>
+                            <div class="price-box-slider">
+                                <div id="slider-range"></div>
+                                <p>
+                                    <input type="text" id="amount" readonly style="border:0; color:#fbb714; font-weight:bold;">
+                                    <button class="btn hvr-hover" type="button" id="filter-button">Filtro</button>
+                                </p>
+                            </div>
+                        </div>
+                        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+                        
+                        <div class="filter-brand-left">
+                            <div class="title-left">
+                                <h3>Marca</h3>
+                            </div>
+                            <div class="brand-box">
+                                <div>
+                                    <input type="radio" id="brand1" name="brand" value="Zara" onclick="filterProducts()">
+                                    <label for="brand1">Zara</label>
+                                <br>
+                                    <input type="radio" id="brand2" name="brand" value="H&M" onclick="filterProducts()">
+                                    <label for="brand2">H&M</label>
+                                <br>
+                                    <input type="radio" id="brand3" name="brand" value="Michael Kors" onclick="filterProducts()">
+                                    <label for="brand3">Michael Kors</label>
+                                <br>
+                                    <input type="radio" id="brand3" name="brand" value="Koaj" onclick="filterProducts()">
+                                    <label for="brand3">Koaj</label>
+                                    <br>
+                                    <button onclick="showAllProducts()">Mostrar todos</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-9 col-sm-12 col-xs-12 shop-content-right">
+                    <div class="row product-categorie-box">
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade show active" id="grid-view">
+                                <div class="row">
+                                    <!-- Producto -->
+                                    <div class="product-container" data-price="699000" data-brand="Zara" data-category="Abrigos">
+                                        <!-- Carrusel de imágenes -->
+                                        <div id="carouselExample1" class="carousel slide" data-bs-ride="carousel"
+                                            style="width: 100%; height: 350px; overflow: hidden;">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="images/1a.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 1" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/1b.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/1c.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/1d.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/1e.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/1f.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/1g.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/1h.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="overlay">
+                                                    <p class="category-description">Abrigo confeccionado con lana.
+                                                        Cuello solapa y manga larga. Bolsillos delanteros de vivo. Bajo
+                                                        con abertura en espalda. Cierre con cinturón del mismo tejido.
+                                                        <br>
+                                                        EXTERIOR
+                                                        <br>
+                                                        50% lana, 30% poliéster , 10% acrílico , 5% poliamida, 5% otras
+                                                        fibras,
+                                                        <br>
+                                                        FORRO
+                                                        <br>
+                                                        100% acetato
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- Controles del carrusel -->
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselExample1" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselExample1" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+
+                                        <!-- Información del producto y botón "Añadir a la Cesta" -->
+                                        <div class="product-info">
+                                            <h4>ABRIGO LARGO CINTURÓN CON LANA</h4>
+
+                                            <!-- Selector de color -->
+                                            <div class="color-buttons">
+                                                <label for="color">Elige el color:</label>
+                                                <button class="color-btn" style="background-color: gray;"
+                                                    onclick="elegirColor('Gris')"></button>
+                                                <button class="color-btn" style="background-color: burlywood;"
+                                                    onclick="elegirColor('Cafe')"></button>
+                                                <button class="color-btn" style="background-color: black;"
+                                                    onclick="elegirColor('Negro')"></button>
+                                            </div>
+
+                                            <!-- Botones de talla -->
+                                            <div class="size-buttons">
+                                                <label for="size">Elige la talla:</label>
+                                                <button class="size-btn" onclick="elegirTalla('S')">S</button>
+                                                <button class="size-btn" onclick="elegirTalla('M')">M</button>
+                                                <button class="size-btn" onclick="elegirTalla('L')">L</button>
+                                                <button class="size-btn" onclick="elegirTalla('XL')">XL</button>
+                                            </div>
+
+                                            <h5>$699.000 COP</h5>
+                                            <!-- Botón "Añadir a la Cesta" -->
+                                            <div class="add-to-cart-btn">
+                                                <button
+                                                    onclick="addToCart('ABRIGO LARGO CINTURÓN CON LANA', 699000 ,'images/1c.jpg')">Añadir
+                                                    al carrito</button>
+                                                <button>Comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-container" data-price="80000" data-brand="H&M" data-category="Abrigos">
+                                        <!-- Carrusel de imágenes -->
+                                        <div id="carouselExample2" class="carousel slide" data-bs-ride="carousel"
+                                            style="width: 100%; height: 350px; overflow: hidden;">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="images/2a.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 1" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/2b.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/2c.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/2d.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/2e.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="overlay">
+                                                    <p class="category-description">Chaqueta de escote pico y manga
+                                                        larga. Detalle de volantes a tono. Cierre frontal con botones.
+                                                        <br>
+                                                        TEJIDO PRINCIPAL
+                                                        <br>
+                                                        99% algodón
+                                                        1% elastano
+                                                        <br>
+                                                        ADORNOS
+                                                        <br>
+                                                        56% poliéster
+                                                        44% algodón
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- Controles del carrusel -->
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselExample2" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselExample2" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+
+                                        <!-- Información del producto y botón "Añadir a la Cesta" -->
+                                        <div class="product-info">
+                                            <h4>CHAQUETA VOLANTES SOFT</h4>
+
+                                            <!-- Selector de color -->
+                                            <div class="color-buttons">
+                                                <label for="color">Elige el color:</label>
+                                                <button class="color-btn" style="background-color: rgb(244, 238, 213);"
+                                                    onclick="elegirColor('Crudo')"></button>
+                                            </div>
+
+                                            <!-- Botones de talla -->
+                                            <div class="size-buttons">
+                                                <label for="size">Elige la talla:</label>
+                                                <button class="size-btn" onclick="elegirTalla('S')">S</button>
+                                                <button class="size-btn" onclick="elegirTalla('M')">M</button>
+                                                <button class="size-btn" onclick="elegirTalla('L')">L</button>
+                                            </div>
+
+                                            <h5>$80.000 COP</h5>
+                                            <!-- Botón "Añadir a la Cesta" -->
+                                            <div class="add-to-cart-btn">
+                                                <button
+                                                    onclick="addToCart('CHAQUETA VOLANTES SOFT', 80000 ,'images/2c.jpg')">Añadir
+                                                    al carrito</button>
+                                                <button>Comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-container" data-price="70000" data-brand="Gef" data-category="Pantalones">
+                                        <!-- Carrusel de imágenes -->
+                                        <div id="carouselExample3" class="carousel slide" data-bs-ride="carousel"
+                                            style="width: 100%; height: 350px; overflow: hidden;">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="images/3a.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 1" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/3b.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/3c.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/3d.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/3e.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/3f.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/3g.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/3h.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+
+                                                <div class="overlay">
+                                                    <p class="category-description">Pantalón de tiro alto confeccionado
+                                                        en tejido de punto elástico y flexible con trama compacta,
+                                                        mullida y opaca. Cintura elástica ajustable con cordones.
+                                                        Detalle de costura marcada en delantero. Bajo acabado flare.
+                                                        <br>
+                                                        EXTERIOR
+                                                        <br>
+                                                        80% algodón,
+                                                        15% poliéster,
+                                                        5% elastano
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- Controles del carrusel -->
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselExample3" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselExample3" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+
+                                        <!-- Información del producto y botón "Añadir a la Cesta" -->
+                                        <div class="product-info">
+                                            <h4>PANTALÓN FLARE INTERLOCK</h4>
+
+                                            <!-- Selector de color -->
+                                            <div class="color-buttons">
+                                                <label for="color">Elige el color:</label>
+                                                <button class="color-btn" style="background-color: rgb(0, 0, 0);"
+                                                    onclick="elegirColor('Negro')"></button>
+                                                <button class="color-btn" style="background-color: rgb(244, 238, 213);"
+                                                    onclick="elegirColor('Crudo')"></button>
+                                                <button class="color-btn" style="background-color: rgb(89, 130, 202);"
+                                                    onclick="elegirColor('Azul medio')"></button>
+                                                <button class="color-btn" style="background-color: rgb(44, 27, 13);"
+                                                    onclick="elegirColor('Marron')"></button>
+                                            </div>
+
+                                            <!-- Botones de talla -->
+                                            <div class="size-buttons">
+                                                <label for="size">Elige la talla:</label>
+                                                <button class="size-btn" onclick="elegirTalla('S')">S</button>
+                                                <button class="size-btn" onclick="elegirTalla('M')">M</button>
+                                                <button class="size-btn" onclick="elegirTalla('L')">L</button>
+                                            </div>
+
+                                            <h5>$70.000 COP</h5>
+                                            <!-- Botón "Añadir a la Cesta" -->
+                                            <div class="add-to-cart-btn">
+                                                <button
+                                                    onclick="addToCart('PANTALÓN FLARE', 70000 ,'images/3a.jpg')">Añadir
+                                                    al carrito</button>
+                                                <button>Comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-container" data-price="150000" data-brand="Zara" data-category="Vestidos">
+                                        <!-- Carrusel de imágenes -->
+                                        <div id="carouselExample4" class="carousel slide" data-bs-ride="carousel"
+                                            style="width: 100%; height: 350px; overflow: hidden;">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="images/4a.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 1" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/4b.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/4c.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/4d.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+
+                                                <div class="overlay">
+                                                    <p class="category-description">Vestido de escote redondo y tirantes
+                                                        anchos. Detalle de abertura en espalda. Cierre lateral con
+                                                        cremallera oculta en costura.
+                                                        <br>
+                                                        EXTERIOR
+                                                        <br>
+                                                        85% poliéster,
+                                                        13% viscosa,
+                                                        2% elastano
+                                                        <br>
+                                                        FORRO
+                                                        <br>
+                                                        100% viscosa
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- Controles del carrusel -->
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselExample4" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselExample4" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+
+                                        <!-- Información del producto y botón "Añadir a la Cesta" -->
+                                        <div class="product-info">
+                                            <h4>VESTIDO MINI SATINADO CUT OUT</h4>
+
+                                            <!-- Selector de color -->
+                                            <div class="color-buttons">
+                                                <label for="color">Elige el color:</label>
+                                                <button class="color-btn" style="background-color: rgb(202, 35, 35);"
+                                                    onclick="elegirColor('Rojo')"></button>
+                                            </div>
+
+                                            <!-- Botones de talla -->
+                                            <div class="size-buttons">
+                                                <label for="size">Elige la talla:</label>
+                                                <button class="size-btn" onclick="elegirTalla('S')">S</button>
+                                                <button class="size-btn" onclick="elegirTalla('M')">M</button>
+                                                <button class="size-btn" onclick="elegirTalla('L')">L</button>
+                                            </div>
+
+                                            <h5>$150.000 COP</h5>
+                                            <!-- Botón "Añadir a la Cesta" -->
+                                            <div class="add-to-cart-btn">
+                                                <button
+                                                    onclick="addToCart('VESTIDO MINI SATINADO', 150000 ,'images/4a.jpg')">Añadir
+                                                    al carrito</button>
+                                                <button>Comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-container" data-price="190000" data-brand="Michael Kors" data-category="Bolsos">
+                                        <!-- Carrusel de imágenes -->
+                                        <div id="carouselExample5" class="carousel slide" data-bs-ride="carousel"
+                                            style="width: 100%; height: 350px; overflow: hidden;">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="images/5a.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 1" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/5b.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/5c.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/5d.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/5e.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/5f.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+
+                                                <div class="overlay">
+                                                    <p class="category-description">Bolso formato shopper. Asa de
+                                                        hombro. Detalle de colgador. Bolsillo interior maxi. Cierre
+                                                        mediante imán.
+                                                        <br>
+                                                        Alto x Ancho x Fondo: 29,5 x 36,5 x 12.
+                                                        <br>
+                                                        EXTERIOR
+                                                        <br>
+                                                        100% poliuretano
+                                                        <br>
+                                                        FORRO
+                                                        <br>
+                                                        65% poliéster,
+                                                        35% algodón.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- Controles del carrusel -->
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselExample5" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselExample5" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+
+                                        <!-- Información del producto y botón "Añadir a la Cesta" -->
+                                        <div class="product-info">
+                                            <h4>BOLSO SHOPPER</h4>
+
+                                            <!-- Selector de color -->
+                                            <div class="color-buttons">
+                                                <label for="color">Elige el color:</label>
+                                                <button class="color-btn" style="background-color: rgb(0, 0, 0);"
+                                                    onclick="elegirColor('Negro')"></button>
+                                                <button class="color-btn" style="background-color: rgb(122, 72, 15);"
+                                                    onclick="elegirColor('Cafe')"></button>
+                                            </div>
+
+                                            <!-- Botones de talla -->
+                                            <div class="size-buttons">
+                                                <label for="size">Elige la medida:</label>
+                                                <button class="size-btn" onclick="elegirTalla('Unica')">U</button>
+                                            </div>
+
+                                            <h5>$190.000 COP</h5>
+                                            <!-- Botón "Añadir a la Cesta" -->
+                                            <div class="add-to-cart-btn">
+                                                <button
+                                                    onclick="addToCart('BOLSO SHOPPER', 190000 ,'images/5a.jpg')">Añadir
+                                                    al carrito</button>
+                                                <button>Comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-container" data-price="110000" data-brand="Koaj"data-category="Abrigos">
+                                        <!-- Carrusel de imágenes -->
+                                        <div id="carouselExample6" class="carousel slide" data-bs-ride="carousel"
+                                            style="width: 100%; height: 350px; overflow: hidden;">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="images/61.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 1" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/6b.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/6c.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/6d.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/6e.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/6f.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/6g.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/6h.jpg" class="d-block w-100 img-fluid"
+                                                        alt="Image 2" style="object-fit: cover; height: 350px;">
+                                                </div>
+
+                                                <div class="overlay">
+                                                    <p class="category-description">Saco de cuello subido con cierre
+                                                        frontal de cremallera. Manga larga. Acabados en rib.
+
+                                                        EXTERIOR
+                                                        <br>
+                                                        69% poliéster,
+                                                        29% algodón,
+                                                        2% elastano.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- Controles del carrusel -->
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselExample6" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselExample6" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+
+                                        <!-- Información del producto y botón "Añadir a la Cesta" -->
+                                        <div class="product-info">
+                                            <h4>SUCO CREMALLERA CUELLO</h4>
+
+                                            <!-- Selector de color -->
+                                            <div class="color-buttons">
+                                                <label for="color">Elige el color:</label>
+                                                <button class="color-btn" style="background-color: rgb(0, 0, 0);"
+                                                    onclick="elegirColor('Negro')"></button>
+                                                <button class="color-btn" style="background-color: rgb(238, 236, 232);"
+                                                    onclick="elegirColor('Blanco roto')"></button>
+                                                <button class="color-btn" style="background-color: rgb(194, 189, 181);"
+                                                    onclick="elegirColor('Gris')"></button>
+                                                <button class="color-btn" style="background-color: rgb(61, 26, 26);"
+                                                    onclick="elegirColor('Marron')"></button>
+                                            </div>
+
+                                            <!-- Botones de talla -->
+                                            <div class="size-buttons">
+                                                <label for="size">Elige la talla:</label>
+
+                                                <button class="size-btn" onclick="elegirTalla('M')">M</button>
+                                                <button class="size-btn" onclick="elegirTalla('L')">L</button>
+                                                <button class="size-btn" onclick="elegirTalla('XL')">XL</button>
+                                                <button class="size-btn" onclick="elegirTalla('XXL')">XXL</button>
+                                            </div>
+
+                                            <h5>$110.000 COP</h5>
+                                            <!-- Botón "Añadir a la Cesta" -->
+                                            <div class="add-to-cart-btn">
+                                                <button
+                                                    onclick="addToCart('SUCO CREMALLERA', 110000 ,'images/61.jpg')">Añadir
+                                                    al carrito</button>
+                                                <button>Comprar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+                                    
+                                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+                                    <!-- End Shop Page -->
+                                    <!-- ALL JS FILES -->
+                                    <script src="js/jquery-3.2.1.min.js"></script>
+                                    <script src="js/popper.min.js"></script>
+                                    <script src="js/bootstrap.min.js"></script>
+                                    <!-- ALL PLUGINS -->
+                                    <script src="js/jquery.superslides.min.js"></script>
+                                    <!-- Bootstrap JS (para que los controles de navegación funcionen) -->
+                                    <script
+                                        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+                                    <script src="js/bootstrap-select.js"></script>
+                                    <script src="js/inewsticker.js"></script>
+                                    <script src="js/images-loded.min.js"></script>
+                                    <script src="js/isotope.min.js"></script>
+                                    <script src="js/owl.carousel.min.js"></script>
+                                    <script src="js/baguetteBox.min.js"></script>
+                                    <script src="js/jquery-ui.js"></script>
+                                    <script src="js/jquery.nicescroll.min.js"></script>
+                                    <script src="js/form-validator.min.js"></script>
+                                    <script src="js/contact-form-script.js"></script>
+                                    <script src="js/custom.js"></script>
+                                    <!-- Incluir jQuery y jQuery UI -->
+                                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                                    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+
+</body>
+
+</html>
